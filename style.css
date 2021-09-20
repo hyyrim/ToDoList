@@ -1,66 +1,83 @@
-@import "reset.css";
+:root {
+  /* Color */
+  --light-color: #f8fdffd2;
+  --primary-color: #c5cae9;
+  --dark-color: #9499b7;
+  --text-color: #000000;
 
+  /* Font size */
+  --font-large: 18px;
+  --font-medium: 14px;
+  --font-small: 12px;
+}
+
+html,
 body {
-    background-color: #f6f9fc;
-    font-family: 'Noto Sans KR', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  box-sizing: border-box;
+  font-family: "Do Hyeon", sans-serif;
+  background-image: url("background-pc.png");
 }
 
-.canvas {
-    width: 700px;
-    height: 700px;
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
-    margin-top: 50px;
+h1 {
+  display: flex;
+  justify-content: space-around;
+  text-shadow: 0 1px 2px rgba(234, 234, 240, 0.452),
+    0 1px 3px rgba(184, 182, 182, 0.726);
 }
 
-.controls {
-    margin: 80px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+section {
+  background-color: var(--light-color);
+  height: 70%;
+  margin: 18px;
+  padding: 4px;
+  border-radius: 10px;
+  font-size: var(--font-large);
 }
 
-.controls .controls__btns {
-    margin-bottom: 30px;
+button,
+button:focus {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  background: #9499b700;
 }
 
-.controls__btns button {
-    all: unset;
-    cursor: pointer;
-    background-color: white;
-    padding: 10px 0;
-    width: 80px;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
-    border: 2px solid rgba(0, 0, 0, 0.2);
-    color: rgba(0, 0, 0, 0.8);
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 12px;
+section .btn {
+  margin: 0;
+  padding: 2px;
 }
 
-.controls__btns button:active {
-    transform: scale(0.98);
+section .check {
+  position: absolute;
+  right: 60px;
 }
 
-.controls .controls__colors {
-    display: flex;
+section .trash {
+  position: absolute;
+  right: 35px;
 }
 
-.controls__colors .controls__color {
-    width: 50px;
-    height: 50px;
-    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
-    border-radius: 50%;
-    cursor: pointer;
+section .check:active {
+  color: rgb(11, 155, 23);
+  transform: scale(0.98);
 }
 
-.controls .controls__range {
-    margin-bottom: 30px;
+section .trash:active {
+  color: rgb(233, 29, 29);
+  transform: scale(0.98);
 }
 
+.icon .add {
+  font-size: 40px;
+  color: var(--light-color);
+  position: absolute;
+  right: 30px;
+}
+
+.icon .add:active {
+  text-shadow: 0 4px 6px rgba(50, 50, 93, 0.452), 0 1px 3px rgba(0, 0, 0, 0.274);
+  transform: scale(0.98);
+}
