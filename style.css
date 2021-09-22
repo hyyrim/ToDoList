@@ -70,14 +70,30 @@ section .trash:active {
   transform: scale(0.98);
 }
 
-.icon .add {
-  font-size: 40px;
-  color: var(--light-color);
-  position: absolute;
-  right: 30px;
+form {
+  display: flex;
+  justify-content: space-around;
 }
 
-.icon .add:active {
+.input_text {
+  width: 80%;
+  height: 30px;
+  border-radius: 8px;
+  margin: 4px 18px;
+}
+
+.add {
+  font-size: 40px;
+  color: var(--light-color);
+  /* position: absolute;
+  right: 30px; */
+}
+
+.add:active {
   text-shadow: 0 4px 6px rgba(50, 50, 93, 0.452), 0 1px 3px rgba(0, 0, 0, 0.274);
   transform: scale(0.98);
+}
+
+.done {
+  text-decoration-line: line-through;
 }
